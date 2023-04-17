@@ -39,7 +39,7 @@ class PharmacyScrapper:
 		self.accept_cookies(accept_cookies_btn_xpath)
     
 		# Go to search engine and search for the product
-		search_engine_input_xpath = '(//input[@class="w-full h-10 px-4 outline-none rounded-3xl text-14 text-primary bg-primary-alternative placeholder-primary"])[1]'
+		search_engine_input_xpath = '(//input[@class="w-full h-10 pl-4 pr-10 outline-none rounded-3xl text-14 truncate text-primary bg-primary-alternative placeholder-primary"])[1]'
 		self.search_product(search_engine_input_xpath)
         
 		# Add found items to the dictionary
@@ -219,8 +219,8 @@ class PharmacyScrapper:
 		self.driver.get(url)
 		    
 		# Accept cookies
-		# accept_cookies_btn_xpath = '//button[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"]'
-		# self.accept_cookies(accept_cookies_btn_xpath)
+		accept_cookies_btn_xpath = '//button[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"]'
+		self.accept_cookies(accept_cookies_btn_xpath)
 		    
 		# Go to search engine and search for the product
 		search_engine_input_xpath = '//input[@id="main_search"]'
